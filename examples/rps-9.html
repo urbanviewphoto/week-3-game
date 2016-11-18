@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RPS</title>
+  </head>
+  <body>
+    <p>Choose r, p, s to play</p>
+    <div id="displayResults">
+      Game Results Go Here
+    </div>
+
+    <script type="text/javascript">
+      // 1. computer pick choice of rock paper scissors
+      // 2. user presses rocks paper scissors
+      // 3. compare see who wins
+      // 4. alert who wins
+
+      var options = ['r', 'p', 's'];
+
+      document.onkeyup = function(event){
+        var key = event.key;
+
+        //var computerChoice = 'p';
+        var computerChoice = options[Math.floor(Math.random()*options.length)];
+        var display = document.querySelector("#displayResults");
+
+        if (key == 'r' && computerChoice == 'p'){
+          var string = '<p>computer won</p>';
+          string += '<p>User chose: ' + key + '<p>';
+          display.innerHTML = string;
+        }else if(key == 's' && computerChoice == 'p'){
+          var string = '<p>user won</p>';
+          string += '<p>User chose: ' + key + '<p>';
+          display.innerHTML = string;
+        }else if(key == 'r' && computerChoice == 'r'){
+          display.innerHTML = '<p>this is a tie</p>';
+        }else if(key == 'p' && computerChoice == 'r'){
+          var string = '<p>user won</p>';
+          string += '<p>User chose: ' + key + '<p>';
+          display.innerHTML = string;
+        }else if(key == 's' && computerChoice == 'r'){
+          var string = '<p>computer won</p>';
+          string += '<p>User chose: ' + key + '<p>';
+          display.innerHTML = string;
+        }else if(key == 'r' && computerChoice == 's'){
+          var string = '<p>user won</p>';
+          string += '<p>User chose: ' + key + '<p>';
+          display.innerHTML = string;
+        }else if(key == 'p' && computerChoice == 's'){
+          var string = '<p>computer won</p>';
+          string += '<p>User chose: ' + key + '<p>';
+          display.innerHTML = string;
+        }else if(key == computerChoice){
+          var string = '<p>tie</p>';
+          string += '<p>User chose: ' + key + '<p>';
+          display.innerHTML = string;
+        }
+
+        console.log(key);
+      }
+
+
+
+    </script>
+  </body>
+</html>
