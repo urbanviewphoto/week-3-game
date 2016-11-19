@@ -24,7 +24,6 @@ document.querySelector("#computer").innerHTML="Guess what letter I'm thinking of
 reset = function() {			   
 	// We generate a random number between 1 and 26
 	var randNumber = Math.floor(Math.random()*letters.length+1);
-	guess = '?'
 	letter = letters[randNumber];
 	lettersTyped = "";
 	left = 9;

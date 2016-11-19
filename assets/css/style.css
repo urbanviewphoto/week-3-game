@@ -21,19 +21,19 @@ div {
 	margin-left: 10px;
 }
 
-#computer, #guesses {
+#computer {
 	font-size: 30px;
 	color: orange;
 }
 
 #wins {
-	color: black;
+	color: blue;
 }
 
 #losses {
 	color: red;
 }
 
-#left {
-	color: blue;
+#left, #guesses {
+	color: black;
 }
