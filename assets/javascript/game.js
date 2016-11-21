@@ -28,6 +28,7 @@ reset = function() {
 	lettersTyped = "";
 	left = 9;
 	i = 0;
+	console.log(letter); 
 
 	// Display wins, losses, left and guesses typed
 	if (wins == 0) {
